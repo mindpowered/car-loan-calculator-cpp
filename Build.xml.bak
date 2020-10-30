@@ -44,7 +44,12 @@
    <depend name="include/haxe/StackItem.h"/>
   </file>
   <file name="src/carloancalculator/CarLoanCalculator.cpp" >
+   <depend name="include/carloancalculator/Calc.h"/>
    <depend name="include/carloancalculator/CarLoanCalculator.h"/>
+  </file>
+  <file name="src/carloancalculator/Calc.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/carloancalculator/Calc.h"/>
   </file>
   <file name="src/Type.cpp" >
    <depend name="include/Reflect.h"/>

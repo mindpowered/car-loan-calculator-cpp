@@ -17,6 +17,7 @@ const char *__hxcpp_all_files[] = {
 "/opt/haxe/std/haxe/ds/Vector.hx",
 "/opt/haxe/std/haxe/iterators/ArrayIterator.hx",
 "/opt/haxe/std/haxe/iterators/ArrayKeyValueIterator.hx",
+"carloancalculator/Calc.hx",
 "carloancalculator/CarLoanCalculator.hx",
 #endif
  0 };
@@ -36,6 +37,7 @@ const char *__hxcpp_all_files_fullpath[] = {
 "/opt/haxe/std/haxe/ds/Vector.hx",
 "/opt/haxe/std/haxe/iterators/ArrayIterator.hx",
 "/opt/haxe/std/haxe/iterators/ArrayKeyValueIterator.hx",
+"/my-component/src/carloancalculator/Calc.hx",
 "/my-component/src/carloancalculator/CarLoanCalculator.hx",
 #endif
  0 };
@@ -48,6 +50,7 @@ const char *__hxcpp_all_classes[] = {
 "Std",
 "StringBuf",
 "Type",
+"carloancalculator.Calc",
 "carloancalculator.CarLoanCalculator",
 "haxe._CallStack.CallStack_Impl_",
 "haxe.Exception",

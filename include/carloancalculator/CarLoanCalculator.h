@@ -10,6 +10,7 @@
 #define INCLUDED_16d41c6fc5b8bf5d
 #include "maglev/MagLev.h"
 #endif
+HX_DECLARE_CLASS1(carloancalculator,Calc)
 HX_DECLARE_CLASS1(carloancalculator,CarLoanCalculator)
 
 namespace carloancalculator{
@@ -50,6 +51,10 @@ class HXCPP_CLASS_ATTRIBUTES CarLoanCalculator_obj : public ::hx::Object
 		static void __boot();
 		static  ::Dynamic __meta__;
 		 ::maglev::MagLev maglev;
+		 ::carloancalculator::Calc calc;
+		void registerMyMethods();
+		::Dynamic registerMyMethods_dyn();
+
 };
 
 } // end namespace carloancalculator

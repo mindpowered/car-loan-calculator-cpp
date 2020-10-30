@@ -34,6 +34,9 @@
 #ifndef INCLUDED_haxe__CallStack_CallStack_Impl_
 #include <haxe/_CallStack/CallStack_Impl_.h>
 #endif
+#ifndef INCLUDED_carloancalculator_Calc
+#include <carloancalculator/Calc.h>
+#endif
 #ifndef INCLUDED_Type
 #include <Type.h>
 #endif
@@ -70,6 +73,7 @@ __files__boot();
 ::haxe::Exception_obj::__register();
 ::haxe::IMap_obj::__register();
 ::haxe::_CallStack::CallStack_Impl__obj::__register();
+::carloancalculator::Calc_obj::__register();
 ::Type_obj::__register();
 ::StringBuf_obj::__register();
 ::Std_obj::__register();

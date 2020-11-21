@@ -62,7 +62,7 @@ class HXCPP_CLASS_ATTRIBUTES MagLevCpp_obj : public ::hx::Object
 		 ::maglev::MagLevOld maglev;
 		void _hx_register( hx::StdString cppMethod, std::function<CppAny(std::vector<CppAny>)> cppCallback);
 
-		 ::maglev::CppAny call( hx::StdString cppMethod, std::vector<CppAny> cppArgs);
+		void call( hx::StdString cppMethod, std::vector<CppAny> cppArgs, std::function<void(CppAny)> cppResultCallback);
 
 		void listen( hx::StdString cppEvent, std::function<CppAny(std::vector<CppAny>)> cppCallback);
 

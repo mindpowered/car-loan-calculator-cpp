@@ -24,13 +24,13 @@ class HXCPP_CLASS_ATTRIBUTES MagLevResult_obj : public ::hx::Object
 	public:
 		enum { _hx_ClassId = 0x01e076c5 };
 
-		void __construct();
+		void __construct(bool async);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="maglev.MagLevResult")
 			{ return ::hx::Object::operator new(inSize,inContainer,inName); }
 		inline void *operator new(size_t inSize, int extra)
 			{ return ::hx::Object::operator new(inSize+extra,true,"maglev.MagLevResult"); }
-		static ::hx::ObjectPtr< MagLevResult_obj > __new();
-		static ::hx::ObjectPtr< MagLevResult_obj > __alloc(::hx::Ctx *_hx_ctx);
+		static ::hx::ObjectPtr< MagLevResult_obj > __new(bool async);
+		static ::hx::ObjectPtr< MagLevResult_obj > __alloc(::hx::Ctx *_hx_ctx,bool async);
 		static void * _hx_vtable;
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(::hx::DynamicArray inArgs);
@@ -53,11 +53,24 @@ class HXCPP_CLASS_ATTRIBUTES MagLevResult_obj : public ::hx::Object
 		static  ::maglev::MagLevResult fromError( ::maglev::MagLevError err);
 		static ::Dynamic fromError_dyn();
 
+		static  ::maglev::MagLevResult createAsync();
+		static ::Dynamic createAsync_dyn();
+
 		static int getStaticType();
 		static ::Dynamic getStaticType_dyn();
 
 		 ::maglev::MagLevAny result;
 		 ::maglev::MagLevError error;
+		bool async;
+		bool complete;
+		::Array< ::Dynamic> accepts;
+		::Array< ::Dynamic> rejects;
+		bool isAsync();
+		::Dynamic isAsync_dyn();
+
+		bool isComplete();
+		::Dynamic isComplete_dyn();
+
 		bool isError();
 		::Dynamic isError_dyn();
 
@@ -72,6 +85,12 @@ class HXCPP_CLASS_ATTRIBUTES MagLevResult_obj : public ::hx::Object
 
 		void setError( ::maglev::MagLevError err);
 		::Dynamic setError_dyn();
+
+		 ::maglev::MagLevResult onResult( ::Dynamic callback);
+		::Dynamic onResult_dyn();
+
+		 ::maglev::MagLevResult onError( ::Dynamic callback);
+		::Dynamic onError_dyn();
 
 		int getType();
 		::Dynamic getType_dyn();

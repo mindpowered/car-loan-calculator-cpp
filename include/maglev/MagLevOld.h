@@ -53,7 +53,7 @@ class HXCPP_CLASS_ATTRIBUTES MagLevOld_obj : public ::hx::Object
 		void _hx_register(::String method, ::Dynamic callback);
 		::Dynamic _hx_register_dyn();
 
-		 ::Dynamic call(::String method,::cpp::VirtualArray args);
+		void call(::String method,::cpp::VirtualArray args, ::Dynamic callback);
 		::Dynamic call_dyn();
 
 		void listen(::String event, ::Dynamic callback);

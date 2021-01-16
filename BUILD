@@ -9,7 +9,7 @@ cc_library(
   strip_include_prefix = 'include/',
   hdrs = [
     'include/carloancalculator/CarLoanCalculator.h',
-  ],
+  ] + glob(["include/mindpowered/**/*.h"]),
   linkstatic = 1,
   alwayslink = 1,
   linkopts = ["-pthread"],

@@ -19,8 +19,9 @@
 #include "hx/StdString.h"
 #endif
 HX_DECLARE_CLASS1(maglev,CppAny)
+HX_DECLARE_CLASS1(maglev,MagLev)
+HX_DECLARE_CLASS1(maglev,MagLevAny)
 HX_DECLARE_CLASS1(maglev,MagLevCpp)
-HX_DECLARE_CLASS1(maglev,MagLevOld)
 
 namespace maglev{
 
@@ -35,13 +36,13 @@ class HXCPP_CLASS_ATTRIBUTES MagLevCpp_obj : public ::hx::Object
 	public:
 		enum { _hx_ClassId = 0x7fdd21fb };
 
-		void __construct( ::maglev::MagLevOld maglev);
+		void __construct( ::maglev::MagLev maglev);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="maglev.MagLevCpp")
 			{ return ::hx::Object::operator new(inSize,inContainer,inName); }
 		inline void *operator new(size_t inSize, int extra)
 			{ return ::hx::Object::operator new(inSize+extra,true,"maglev.MagLevCpp"); }
-		static ::hx::ObjectPtr< MagLevCpp_obj > __new( ::maglev::MagLevOld maglev);
-		static ::hx::ObjectPtr< MagLevCpp_obj > __alloc(::hx::Ctx *_hx_ctx, ::maglev::MagLevOld maglev);
+		static ::hx::ObjectPtr< MagLevCpp_obj > __new( ::maglev::MagLev maglev);
+		static ::hx::ObjectPtr< MagLevCpp_obj > __alloc(::hx::Ctx *_hx_ctx, ::maglev::MagLev maglev);
 		static void * _hx_vtable;
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(::hx::DynamicArray inArgs);
@@ -59,7 +60,9 @@ class HXCPP_CLASS_ATTRIBUTES MagLevCpp_obj : public ::hx::Object
 
 		static  ::maglev::MagLevCpp getInstance( hx::StdString cppKey);
 
-		 ::maglev::MagLevOld maglev;
+		static void throwString( hx::StdString message);
+
+		 ::maglev::MagLev maglev;
 		void _hx_register( hx::StdString cppMethod, std::function<CppAny(std::vector<CppAny>)> cppCallback);
 
 		void call( hx::StdString cppMethod, std::vector<CppAny> cppArgs, std::function<void(CppAny)> cppResultCallback);
@@ -77,6 +80,24 @@ class HXCPP_CLASS_ATTRIBUTES MagLevCpp_obj : public ::hx::Object
 		::Dynamic AnyToCppAny_dyn();
 
 		 std::vector<CppAny> AnyArrayToCppAnyVector(::cpp::VirtualArray anyArray);
+
+		void old_register(::String method, ::Dynamic callback);
+		::Dynamic old_register_dyn();
+
+		void old_call(::String method,::cpp::VirtualArray args, ::Dynamic callback);
+		::Dynamic old_call_dyn();
+
+		void old_listen(::String event, ::Dynamic callback);
+		::Dynamic old_listen_dyn();
+
+		void old_emit(::String event,::cpp::VirtualArray args);
+		::Dynamic old_emit_dyn();
+
+		 ::Dynamic old_convertToHaxe( ::maglev::MagLevAny x);
+		::Dynamic old_convertToHaxe_dyn();
+
+		 ::maglev::MagLevAny old_convertToMagLev( ::Dynamic x);
+		::Dynamic old_convertToMagLev_dyn();
 
 };
 

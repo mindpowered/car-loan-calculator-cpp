@@ -9,7 +9,7 @@
 #ifndef INCLUDED_maglev_MagLevAny
 #include <maglev/MagLevAny.h>
 #endif
-HX_DECLARE_STACK_FRAME(_hx_pos_fc3d282075c9cb4d_567_new)
+HX_DECLARE_STACK_FRAME(_hx_pos_fc3d282075c9cb4d_590_new)
 HX_DECLARE_CLASS1(maglev,MagLevAny)
 HX_DECLARE_CLASS1(maglev,MagLevString)
 
@@ -42,9 +42,9 @@ class HXCPP_CLASS_ATTRIBUTES MagLevString_obj : public  ::maglev::MagLevAny_obj
 			MagLevString_obj *__this = (MagLevString_obj*)(::hx::Ctx::alloc(_hx_ctx, sizeof(MagLevString_obj), true, "maglev.MagLevString"));
 			*(void **)__this = MagLevString_obj::_hx_vtable;
 {
-            	HX_STACKFRAME(&_hx_pos_fc3d282075c9cb4d_567_new)
-HXLINE( 568)		( ( ::maglev::MagLevString)(__this) )->value = value;
-HXLINE( 569)		__this->super::__construct();
+            	HX_STACKFRAME(&_hx_pos_fc3d282075c9cb4d_590_new)
+HXLINE( 591)		( ( ::maglev::MagLevString)(__this) )->value = value;
+HXLINE( 592)		__this->super::__construct();
             	}
 		
 			return __this;
